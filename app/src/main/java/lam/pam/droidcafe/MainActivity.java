@@ -1,5 +1,6 @@
 package lam.pam.droidcafe;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     @Override

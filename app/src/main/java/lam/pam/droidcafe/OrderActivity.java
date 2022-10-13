@@ -20,6 +20,9 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
         final Spinner List = findViewById(R.id.spinner);
+        String message =intent.getStringExtra(FirstFragment.EXTRA_MASSAGE);
+        TextView textView=findViewById(R.id.ordermakan);
+        textView.setText(message);
         List.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

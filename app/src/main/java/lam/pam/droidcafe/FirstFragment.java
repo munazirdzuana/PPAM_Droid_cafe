@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import lam.pam.droidcafe.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
-
+    public static final String EXTRA_MASSAGE ="com.example.android.twoactivities.extra.MESSAGE";
     private FragmentFirstBinding binding;
 
     @Override
@@ -30,16 +30,23 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Intent intent = new Intent(getActivity(), OrderActivity.class);
         view.findViewById(R.id.donut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 displayToast(getString(R.string.donut_order_message));
+                String order ="Donat";
+                intent.putExtra(EXTRA_MASSAGE, order);
+                startActivity(intent);
             }
         });
         view.findViewById(R.id.ice_cream).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 displayToast(getString(R.string.ice_cream_order_message));
+                String order ="Ice Cream";
+                intent.putExtra(EXTRA_MASSAGE, order);
+                startActivity(intent);
             }
         });
 
@@ -47,10 +54,11 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 displayToast(getString(R.string.froyo_order_message));
+                String order ="Froyo";
+                intent.putExtra(EXTRA_MASSAGE, order);
+                startActivity(intent);
             }
         });
-
-
 
     }
 
