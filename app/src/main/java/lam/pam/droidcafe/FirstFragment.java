@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import lam.pam.droidcafe.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
-    public static final String EXTRA_MASSAGE ="com.example.android.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_MASSAGE ="extraa";
     private FragmentFirstBinding binding;
 
     @Override
